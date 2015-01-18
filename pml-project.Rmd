@@ -51,14 +51,14 @@ Removing columns with a lot of NA(>70%),irrelevant columns and columns with near
 ```
 
 ### Validation the model accuracy on the testing set
-```{r, echo=TRUE}
+```{r, echo=TRUE, message=TRUE}
     prediction <- predict(model, testing)
     print(confusionMatrix(prediction, testing$classe))
 ```
 The results are great. The out of sample error is minimal.
 
 ## Predicting the values on the test set
-```{r, echo=TRUE}
+```{r, echo=TRUE, message=TRUE}
 testPrediction <- predict(model, test)
 testPrediction
 ```
